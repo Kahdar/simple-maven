@@ -34,4 +34,4 @@ pipeline:
                     shell: Sh
                     command: |-
                       echo 'Harenss CI'
-                      mvn clean install
+                      mvn clean install example/pom.xml
