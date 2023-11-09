@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_simple_maven_1699508573672-pr-trigger-input-set
+  identifier: Build_simple_maven_1699508573672prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: HarnessDemo
+  pipeline:
+    identifier: Build_simple_maven_1699508573672
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
