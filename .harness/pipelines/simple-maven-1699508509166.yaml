@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_simple_maven_1699508573672
+  name: Build simple-maven
+  orgIdentifier: default
+  projectIdentifier: HarnessDemo
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1699508432688
+        repoName: simple-maven
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
