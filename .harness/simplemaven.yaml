@@ -32,4 +32,8 @@ pipeline:
                   identifier: Run
                   spec:
                     shell: Bash
-                    command: echo 'Harness CI'
+                    command: |-
+                      echo 'Harness CI'
+                      cd github-maven-example/example
+                      mvn clean install
+                      mvn site
